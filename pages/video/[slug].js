@@ -81,6 +81,7 @@ const Video = ({ video }) => {
 						className="video-overlay"
 						onClick={() => {
 							changeToSeen(video.slug);
+							// state is false to start, if they are watching, state switches to true
 							watching ? setWatching(false) : setWatching(true);
 						}}
 					>
@@ -88,6 +89,7 @@ const Video = ({ video }) => {
 					</button>
 				</div>
 			)}
+			{/* if watching is true, show the following elements */}
 			{watching && (
 				<video width="100%" controls>
 					<source src={video.mp4.url} type="video/mp4" />

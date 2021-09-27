@@ -1,13 +1,13 @@
 import { gql, GraphQLClient } from "graphql-request";
-// import Link from "next/Link";
-// import Image from "next/Image";
-// import Section from "../components/Section";
-// import NavBar from "../components/NavBar";
-// import disneyLogo from "../public/disney-button.png";
-// import marvelLogo from "../public/marvel-button.png";
-// import natgeoLogo from "../public/natgeo-button.png";
-// import starwarsLogo from "../public/star-wars-button.png";
-// import pixarLogo from "../public/pixar.png";
+import Link from "next/Link";
+import Image from "next/Image";
+import Section from "../components/Section";
+import NavBar from "../components/NavBar";
+import disneyLogo from "../public/disney-button.png";
+import marvelLogo from "../public/marvel-button.png";
+import natgeoLogo from "../public/natgeo-button.png";
+import starwarsLogo from "../public/star-wars-button.png";
+import pixarLogo from "../public/pixar.png";
 
 // this connects to all my graphql stuff
 export const getStaticProps = async () => {
