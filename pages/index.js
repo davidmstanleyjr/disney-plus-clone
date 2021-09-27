@@ -66,6 +66,7 @@ export const getStaticProps = async () => {
 
 const Home = ({ videos, account }) => {
 	const randomVideo = (videos) => {
+		// math.floor rounds down to the nearest number
 		return videos[Math.floor(Math.random() * videos.length)];
 	};
 
@@ -74,16 +75,19 @@ const Home = ({ videos, account }) => {
 	};
 
 	const unSeenVideos = (videos) => {
-		return videos.filter((video) => video.seen == false || video.seen == null);
+		return videos.filter(
+			(video) => video.seen === false || video.seen === null
+		);
 	};
 
 	console.log(
 		"not seen:",
-		videos.filter((video) => video.seen == false || video.seen == null)
+		videos.filter((video) => video.seen === false || video.seen === null)
 	);
 
 	return (
 		<>
+			{/* this starts all the logic for actually populating the page with videos */}
 			<NavBar account={account} />
 			<div className="app">
 				<div className="main-video">

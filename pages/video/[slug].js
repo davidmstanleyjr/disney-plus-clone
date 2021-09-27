@@ -3,6 +3,7 @@
 import { gql, GraphQLClient } from "graphql-request";
 import { useState } from "react";
 
+// this gets all the data I need from graphQL
 export const getServerSideProps = async (pageContext) => {
 	const url = process.env.ENDPOINT;
 	const graphQLClient = new GraphQLClient(url, {
@@ -32,6 +33,7 @@ export const getServerSideProps = async (pageContext) => {
 		}
 	`;
 
+	//more graphql data fetching logic
 	const variables = {
 		pageSlug,
 	};
