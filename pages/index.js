@@ -76,6 +76,7 @@ const Home = ({ videos, account }) => {
 
 	const unSeenVideos = (videos) => {
 		return videos.filter(
+			// return videos that haven't been seen
 			(video) => video.seen === false || video.seen === null
 		);
 	};
