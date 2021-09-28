@@ -14,7 +14,7 @@ export const getStaticProps = async () => {
 	const url = process.env.ENDPOINT;
 	const graphQLClient = new GraphQLClient(url, {
 		headers: {
-			Authorization: process.env.GRAPH_CMS_TOKEN,
+			"Authorization" : process.env.GRAPH_CMS_TOKEN
 		},
 	});
 
@@ -41,7 +41,7 @@ export const getStaticProps = async () => {
 
 	const accountQuery = gql`
 		query {
-			account(where: { id: "cktvsewr4djfd0b234mxgzx9r" }) {
+			account (where: { id: "cktvsewr4djfd0b234mxgzx9r"}) {
 				username
 				avatar {
 					url
