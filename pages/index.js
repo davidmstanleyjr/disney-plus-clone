@@ -41,7 +41,7 @@ export const getStaticProps = async () => {
 
 	const accountQuery = gql`
 		query {
-			account (where: { id: "cktvsewr4djfd0b234mxgzx9r"}) {
+			account (where: { id: "cktvssv2gdll30b23zgjxl63g"}) {
 				username
 				avatar {
 					url
@@ -137,7 +137,7 @@ const Home = ({ videos, account }) => {
 				<Section
 					id="marvel"
 					genre={"Marvel"}
-					videos={filterVideos(videos, "thriller")}
+					videos={filterVideos(videos, "marvel")}
 				/>
 				<Section
 					id="nat-geo"

@@ -26,6 +26,8 @@ a {
 	overflow: hidden;
 	position: relative;
 	margin-bottom: 50px;
+	object-fit: contain;
+	display: inline-block;
 }
 
 .main-video img {

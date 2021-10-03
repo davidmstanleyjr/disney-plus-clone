@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# disney-plus-clone
 
-## Getting Started
+This project was extremely difficult. It didn't work correctly for a very long time. I did it because I wanted to worjk with GraphCMS. I like GraphCMS and I will be working with it again in the future.
 
-First, run the development server:
+## Environment Setup
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. Clone my repo at https://github.com/davidmstanleyjr/disney-plus-clone
+2. CD into it and run "npm install".
+3. Then type "npm run dev" to start the server.
+4. You will have to setup GraphCMS on your own.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. React
+2. Next JS
+3. GraphCMS
+4. Graphql
+5. Graphql-request
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Issues
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+I think the main issue is that I've never used GraphQL or GraphCMS before, so I had no frame of reference and didn't know what I was doing. 
 
-## Learn More
+GraphCMS reminds me a lot of Strapi. They both allow you to basically create your own API and consume it within your app. 
 
-To learn more about Next.js, take a look at the following resources:
+This project allows you to create an account with GraphCMS, attach a username and avatar to said account and consume it within your app. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I could play videos but everything relating to the account simply wouldn't work. I'm talking about the username and avatar. I kept getting this error message in my terminal and in my console that the account username and avatar were both null. Basically, that information wasn't being read in the browser. 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Eventually, I figured out what I was doing wrong. In order to access my account information within the app, I needed to pass in my randomly generated account key that it attached to my account. I made a mistake and was passing in my platform ID instead of my account ID. I fixed the mistake and everything worked. 
 
-## Deploy on Vercel
+GraphCMS is pretty user friendly and made playing videos pretty easy. I didn't have to write any video player logic. GraphCMS has it's own videoplayer and it works perfectly. 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The most difficult part was the changetoseen logic. I basically made each video unseen from the start and it would change to seen if someone clicked on it. I basically used a boolean to make that work.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Screenshots
+
+![Screenshot 1](screenshots/snip1.PNG)
+![Screenshot 2](screenshots/snip2.PNG)
+![Screenshot 3](screenshots/snip3.PNG)
+![Screenshot 4](screenshots/snip4.PNG)
+![Screenshot 5](screenshots/snip5.PNG)
+![Screenshot 6](screenshots/snip6.PNG)
