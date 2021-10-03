@@ -19,7 +19,7 @@ This project was extremely difficult. It didn't work correctly for a very long t
 
 ## Issues
 
-I think  main issue is that I've never used GraphQL or GraphCMS before, so I had no frame of reference and didn't know what I was doing. 
+I think the main issue is that I've never used GraphQL or GraphCMS before, so I had no frame of reference and didn't know what I was doing. 
 
 GraphCMS reminds me a lot of Strapi. They both allow you to basically create your own API and consume it within your app. 
 
