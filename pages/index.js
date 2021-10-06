@@ -1,6 +1,6 @@
 import { gql, GraphQLClient } from "graphql-request";
-import Link from "next/Link";
-import Image from "next/Image";
+import Link from "next/link";
+import Image from "next/image";
 import Section from "../components/Section";
 import NavBar from "../components/NavBar";
 import disneyLogo from "../public/images/disney-button.png";
@@ -14,7 +14,7 @@ export const getStaticProps = async () => {
 	const url = process.env.ENDPOINT;
 	const graphQLClient = new GraphQLClient(url, {
 		headers: {
-			"Authorization" : process.env.GRAPH_CMS_TOKEN
+			Authorization: process.env.GRAPH_CMS_TOKEN,
 		},
 	});
 
@@ -41,7 +41,7 @@ export const getStaticProps = async () => {
 
 	const accountQuery = gql`
 		query {
-			account (where: { id: "cktvssv2gdll30b23zgjxl63g"}) {
+			account(where: { id: "cktvssv2gdll30b23zgjxl63g" }) {
 				username
 				avatar {
 					url
