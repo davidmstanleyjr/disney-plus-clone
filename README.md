@@ -19,19 +19,21 @@ This project was extremely difficult. It didn't work correctly for a very long t
 
 ## Issues
 
-I think  main issue is that I've never used GraphQL or GraphCMS before, so I had no frame of reference and didn't know what I was doing. 
+I think main issue is that I've never used GraphQL or GraphCMS before, so I had no frame of reference and didn't know what I was doing.
 
-GraphCMS reminds me a lot of Strapi. They both allow you to basically create your own API and consume it within your app. 
+GraphCMS reminds me a lot of Strapi. They both allow you to basically create your own API and consume it within your app.
 
-This project allows you to create an account with GraphCMS, attach a username and avatar to said account and consume it within your app. 
+This project allows you to create an account with GraphCMS, attach a username and avatar to said account and consume it within your app.
 
-I could play videos but everything relating to the account simply wouldn't work. I'm talking about the username and avatar. I kept getting this error message in my terminal and in my console that the account username and avatar were both null. Basically, that information wasn't being read in the browser. 
+I could play videos but everything relating to the account simply wouldn't work. I'm talking about the username and avatar. I kept getting this error message in my terminal and in my console that the account username and avatar were both null. Basically, that information wasn't being read in the browser.
 
-Eventually, I figured out what I was doing wrong. In order to access my account information within the app, I needed to pass in my randomly generated account key that it attached to my account. I made a mistake and was passing in my platform ID instead of my account ID. I fixed the mistake and everything worked. 
+Eventually, I figured out what I was doing wrong. In order to access my account information within the app, I needed to pass in my randomly generated account key that it attached to my account. I made a mistake and was passing in my platform ID instead of my account ID. I fixed the mistake and everything worked.
 
-GraphCMS is pretty user friendly and made playing videos pretty easy. I didn't have to write any video player logic. GraphCMS has it's own videoplayer and it works perfectly. 
+GraphCMS is pretty user friendly and made playing videos pretty easy. I didn't have to write any video player logic. GraphCMS has it's own videoplayer and it works perfectly.
 
 The most difficult part was the changetoseen logic. I basically made each video unseen from the start and it would change to seen if someone clicked on it. I basically used a boolean to make that work.
+
+It also took me over two weeks to deploy the app. The bearer authorization logic in my changeToSeen.js file was wrong. It was correct in my .env.local file but not in the js file, so because the deployed version can't access my .env file I kept getting and error. I updated changeToSeen.js and entered the endpoint and GRAPH_CMS_TOKEN keys into the environment variables when I tried to deploy and then it worked/
 
 # Screenshots
 
@@ -41,3 +43,9 @@ The most difficult part was the changetoseen logic. I basically made each video 
 ![Screenshot 4](screenshots/snip4.PNG)
 ![Screenshot 5](screenshots/snip5.PNG)
 ![Screenshot 6](screenshots/snip6.PNG)
+
+## Live Page
+
+Here is the link to my deployed site. I hope you have fun.
+
+https://davids-family-video.vercel.app/
