@@ -1,6 +1,6 @@
 # disney-plus-clone
 
-This project was extremely difficult. It didn't work correctly for a very long time. I did it because I wanted to worjk with GraphCMS. I like GraphCMS and I will be working with it again in the future.
+This project was extremely difficult. It didn't work correctly for a very long time. I did it because I wanted to work with GraphCMS. I like GraphCMS and I will be working with it again in the future.
 
 ## Environment Setup
 
